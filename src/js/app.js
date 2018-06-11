@@ -49,4 +49,20 @@ function init() {
 
         });
     }
+
+        
+    document.addEventListener('click', e => {
+        e.preventDefault();
+        const toClose = document.getElementById('popup');
+        if(e.target.id === 'close') {
+            toClose.innerHTML = '';
+
+        }
+
+        if (e.target.className === 'mark-link') {
+            const address = e.target.getAttribute('data-info')
+
+            form(data, data[address], myMap, clusterer);
+        }
+    });
 }

@@ -13,7 +13,7 @@ export default function form(data, current, myMap, clusterer) {
     left: ${left}px;
         `);
     container.innerHTML = `<div class="form_container">
-                        <div class="header"><p>${current.address}</p></div>
+                        <div class="header"><p>${current.address}</p><button id="close">x</button></div>
                         <div id="reviews">
                         </div>
                         <form id="form_vals" action="" class="review_form">
@@ -24,5 +24,6 @@ export default function form(data, current, myMap, clusterer) {
                         </form>
                         </div>`;
     addReview(data, current, myMap, clusterer);
+
     return true;
 }
