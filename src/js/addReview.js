@@ -1,6 +1,7 @@
 import display from './view/display';
+import placemark from './view/placemark';
 
-export default function addReview (data, current) {
+export default function addReview (data, current, myMap, clusterer) {
     const addBtn = document.getElementById('add');
     const name = document.getElementById('name');
     const place = document.getElementById('place');
@@ -22,7 +23,8 @@ export default function addReview (data, current) {
             reviews.push(review);
             data[current.address].reviews = reviews;
             display(reviews);
+            placemark(current, data, myMap, clusterer);
         }
     })
-    return false;
+    return true;
 }

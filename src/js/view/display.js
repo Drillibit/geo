@@ -6,4 +6,5 @@ export default function display(reviews) {
                                 <p>${el.text}</p>`
             reviewBlock.appendChild(revNode);
         });
+    return true;
 }

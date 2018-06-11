@@ -7,9 +7,9 @@ const placemark = (current, data, myMap, clusterer) => {
     const myMark = new ymaps.Placemark([current.coords[0], current.coords[1]], {
         balloonContentHeader: `${name}`,
         balloonContentBody: `<a href="#" class="mark-link">${address}</a>`,
-        balloonContentFooter: `${date}`,
+        balloonContentFooter: `${date}`
     }, {
-        openBalloonOnClick: true
+        openBalloonOnClick: false
     });
 
     myMap.geoObjects.add(myMark);

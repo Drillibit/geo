@@ -23,6 +23,6 @@ export default function form(data, current, myMap, clusterer) {
                             <button id="add">Добавить</button>
                         </form>
                         </div>`;
-    placemark(current, data, myMap, clusterer);
-    addReview(data, current)
+    addReview(data, current, myMap, clusterer);
+    return true;
 }
