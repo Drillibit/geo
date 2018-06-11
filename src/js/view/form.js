@@ -1,5 +1,6 @@
 import addReview from '../addReview';
 import placemark from '../view/placemark';
+import display from '../view/display';
 
 export default function form(data, current, myMap, clusterer) {
     const container = document.getElementById('popup');
@@ -23,6 +24,9 @@ export default function form(data, current, myMap, clusterer) {
                             <button id="add">Добавить</button>
                         </form>
                         </div>`;
+    if (current.reviews) {
+        display(current.reviews)
+    }
     addReview(data, current, myMap, clusterer);
 
     return true;
